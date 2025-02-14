@@ -1,0 +1,196 @@
+/* [project]/src/app/styles/product.css [app-client] (css) */
+.Product {
+  background-color: #f5fafd;
+  margin: 5px 10px;
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 10px -6px #000000bf;
+}
+
+.Product .imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.Product .imageContainer a {
+  box-shadow: 0 0 10px -6px #000000bf;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.Product .imageContainer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.Product .infoContainer {
+  width: 140px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Product .infoContainer div {
+  width: 100%;
+}
+
+.Product .infoContainer .title h3 {
+  font-size: 14px;
+}
+
+.Product .infoContainer .code {
+  font-size: 12px;
+  color: gray;
+}
+
+.Product .infoContainer .pricesContainer {
+  display: flex;
+}
+
+.Product .infoContainer .pricesContainer .price {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border: 2px solid #ff4202;
+  font-weight: bold;
+  color: #ff4202;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.Product .quantityContainer {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 100%;
+}
+
+.Product .quantityContainer span {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.Product .quantityContainer button {
+  border-radius: 50%;
+  font-size: 18px;
+  width: 22px;
+  border: 1px solid;
+  background-color: #0000;
+  box-shadow: 0 0 4px #000000bf;
+}
+
+
+/* [project]/src/app/styles/productContainer.css [app-client] (css) */
+.ProductsContainer {
+  margin-top: 65px;
+}
+
+
+/* [project]/src/app/styles/cartModal.css [app-client] (css) */
+.CartModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f8ffaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CartModal .container {
+  width: 320px;
+  -webkit-box-shadow: 0 0 10px -6px #000000bf;
+  -moz-box-shadow: 0 0 10px -6px #000000bf;
+  box-shadow: 0 0 10px -6px #000000bf;
+  background-color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.CartModal .container .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.CartModal .container .buttons button {
+  background-color: #0000;
+  padding: 20px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.CartModal .container .buttons span {
+  padding: 20px;
+  background-color: #ff4202;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.CartModal .container .proceed {
+  width: 280px;
+  margin-bottom: 20px;
+  background-color: #0ff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+
+/* [project]/src/app/styles/header.css [app-client] (css) */
+.header {
+  width: 320px;
+  position: fixed;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.header h1 {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.header .ShowCartButton {
+  margin-right: 10px;
+}
+
+.header .ShowCartButton button {
+  display: flex;
+  align-items: center;
+  background-color: #0000;
+  border: none;
+}
+
+.header .ShowCartButton button img {
+  width: 25px;
+}
+
+.header .ShowCartButton button span {
+  margin-left: 5px;
+  display: block;
+  border-radius: 50%;
+  background-color: #ff4202;
+  color: #fff;
+  padding: 2px 5px;
+}
+
+
+/*# sourceMappingURL=src_app_styles_22a55f._.css.map*/

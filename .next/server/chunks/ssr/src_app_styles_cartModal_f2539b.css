@@ -1,0 +1,60 @@
+/* [project]/src/app/styles/cartModal.css [app-client] (css) */
+.CartModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f8ffaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CartModal .container {
+  width: 320px;
+  -webkit-box-shadow: 0 0 10px -6px #000000bf;
+  -moz-box-shadow: 0 0 10px -6px #000000bf;
+  box-shadow: 0 0 10px -6px #000000bf;
+  background-color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.CartModal .container .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.CartModal .container .buttons button {
+  background-color: #0000;
+  padding: 20px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.CartModal .container .buttons span {
+  padding: 20px;
+  background-color: #ff4202;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.CartModal .container .proceed {
+  width: 280px;
+  margin-bottom: 20px;
+  background-color: #0ff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+
+/*# sourceMappingURL=src_app_styles_cartModal_f2539b.css.map*/
