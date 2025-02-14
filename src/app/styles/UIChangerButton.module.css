@@ -1,0 +1,36 @@
+/* app/styles/UIChangerButton.module.css */
+
+/* Estilos para el botón de cambiar UI */
+.uiChangerButton {
+    padding: 10px 20px;
+    background-color: #3498db; /* Azul vibrante */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: fixed; /* Fijamos el botón en la parte superior derecha */
+    top: 20px; /* Espacio desde el borde superior */
+    right: 20px; /* Espacio desde el borde derecho */
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+  }
+  
+  /* Efecto hover para el botón */
+  .uiChangerButton:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+  }
+  
+  /* Efecto focus */
+  .uiChangerButton:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+  }
+  
+  /* Efecto activo */
+  .uiChangerButton:active {
+    transform: scale(1);
+    background-color: #1f639d;
+  }
+  

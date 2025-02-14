@@ -1,0 +1,125 @@
+/* Contenedor principal de productos, se asegura de que los productos se distribuyan en filas y columnas */
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  margin: 0 auto; /* Centra el contenedor */
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilo de cada tarjeta de producto */
+.productCard {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px; /* Limita el ancho máximo de la tarjeta */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Añade una transición suave al escalar */
+  flex: 1 1 calc(33.333% - 40px); /* Ajusta el tamaño de las tarjetas para que ocupen un tercio del contenedor */
+  box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+}
+
+/* Efecto hover para la tarjeta de producto */
+.productCard:hover {
+  transform: scale(1.05); /* Escala la tarjeta ligeramente */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añade una sombra más pronunciada */
+}
+
+/* Estilo de la imagen del producto */
+.productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ajusta la imagen para que se adapte al contenedor sin recortarse */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Contenedor de los detalles del producto */
+.productDetails {
+  margin-top: 15px;
+  text-align: left;
+}
+
+/* Estilo del precio del producto */
+.productPrice {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Contenedor de los botones de acción */
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Estilo base para los botones de agregar y eliminar del carrito */
+.addToCartButton,
+.removeFromCartButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para el color de fondo y la escala */
+}
+
+/* Efecto hover para los botones de agregar y eliminar del carrito */
+.addToCartButton:hover,
+.removeFromCartButton:hover {
+  background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Escala el botón ligeramente */
+}
+
+/* Efecto de enfoque para los botones de agregar y eliminar del carrito */
+.addToCartButton:focus,
+.removeFromCartButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.5); /* Añade una sombra alrededor del botón */
+}
+
+/* Estilo para el botón deshabilitado */
+.disabledButton {
+  background-color: #ccc; /* Color de fondo gris */
+  cursor: not-allowed; /* Cambia el cursor a no permitido */
+  transform: none; /* Elimina el efecto de hover */
+}
+
+/* Elimina el efecto hover para el botón deshabilitado */
+.disabledButton:hover {
+  background-color: #ccc; /* Mantiene el color de fondo gris */
+  transform: none; /* Elimina el efecto de hover */
+}
+
+/* Estilo para el botón activo (eliminar) */
+.activeButton {
+  background-color: #e63946; /* Color de fondo rojo */
+}
+
+/* Efecto hover para el botón activo (eliminar) */
+.activeButton:hover {
+  background-color: #d62839; /* Cambia el color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Escala el botón ligeramente */
+}
+
+/* Media queries para hacer el diseño más responsivo */
+@media (max-width: 1200px) {
+  .productCard {
+    flex: 1 1 calc(50% - 40px); /* Ajusta el tamaño de las tarjetas para que ocupen la mitad del contenedor */
+  }
+}
+
+@media (max-width: 768px) {
+  .productCard {
+    flex: 1 1 calc(100% - 40px); /* Ajusta el tamaño de las tarjetas para que ocupen todo el contenedor */
+  }
+}

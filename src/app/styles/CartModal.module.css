@@ -1,0 +1,60 @@
+/* Estilos para el modal del carrito */
+.CartModal {
+    position: fixed; /* Posiciona el elemento fijamente */
+    top: 0; /* Posiciona desde la parte superior */
+    left: 0; /* Posiciona desde la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(240, 248, 255, 0.685); /* Color de fondo con transparencia */
+    display: flex; /* Utiliza flexbox para el layout */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+}
+
+/* Contenedor principal del modal */
+.container {
+    width: 320px; /* Ancho fijo */
+    box-shadow: var(--box-shadow-common); /* Sombra común */
+    background-color: rgb(44, 44, 44); /* Color de fondo */
+    display: flex; /* Utiliza flexbox para el layout */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+/* Contenedor de los botones */
+.buttons {
+    width: 100%; /* Ancho completo */
+    display: flex; /* Utiliza flexbox para el layout */
+    justify-content: space-between; /* Espacia los elementos */
+    padding: 20px; /* Añade padding */
+}
+
+/* Estilos para los botones dentro del contenedor de botones */
+.buttons button {
+    background-color: transparent; /* Fondo transparente */
+    padding: 20px; /* Añade padding */
+    border-radius: 6px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+}
+
+/* Estilos para los spans dentro del contenedor de botones */
+.buttons span {
+    padding: 20px; /* Añade padding */
+    background-color: var(--primary-color); /* Color de fondo */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Peso de la fuente */
+    border-radius: 6px; /* Bordes redondeados */
+}
+
+/* Estilos para el botón de proceder */
+.proceed {
+    width: 280px; /* Ancho fijo */
+    margin-bottom: 20px; /* Añade margen inferior */
+    background-color: cyan; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
+    padding: 10px; /* Añade padding */
+    border-radius: 4px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+}

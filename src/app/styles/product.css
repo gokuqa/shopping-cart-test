@@ -1,86 +1,97 @@
+/* Estilos para el componente de producto */
 .Product {
-  background-color: rgb(245, 250, 253);
-  margin: 5px 10px;
-  padding: 5px;
-  border-radius: 4px;
-  display: flex;
-  position: relative;
-  box-shadow: 0 0 10px -6px rgba(0, 0, 0, 0.75); /* Consolidado */
-
-  .imageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    margin: 10px;
-
-    a {
-      box-shadow: 0 0 10px -6px #000000bf;
-      width: 60px;
-      height: 60px;
-      border-radius: 4px;
-    }
-
-    img {
-      width: 60px;
-      height: 60px;
-      border-radius: 4px;
-    }
-  }
-
-  .infoContainer {
-    width: 140px;
-    display: flex;
-    flex-wrap: wrap;
-
-    div {
-      width: 100%;
-    }
-
-    .title h3 {
-      font-size: 14px;
-    }
-
-    .code {
-      font-size: 12px;
-      color: gray;
-    }
-
-    .pricesContainer {
-      display: flex;
-
-      .price {
-        display: flex;
-        align-items: center;
-        padding: 0 8px;
-        border: 2px solid rgb(255, 66, 2);
-        font-weight: bold;
-        color: rgb(255, 66, 2);
-        border-radius: 20px;
-        font-size: 14px;
-      }
-    }
-  }
-
-  .quantityContainer {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    height: 100%;
-
-    span {
-      margin: 0 5px;
-      font-weight: bold;
-    }
-
-    button {
-      border-radius: 50%;
-      font-size: 18px;
-      width: 22px;
-      border: 1px solid;
-      background-color: transparent;
-      box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.75); /* Consolidado */
-    }
-  }
+  background-color: rgb(245, 250, 253); /* Color de fondo del producto */
+  margin: 5px 10px; /* Margen alrededor del producto */
+  padding: 5px; /* Espaciado interno del producto */
+  border-radius: 4px; /* Bordes redondeados */
+  display: flex; /* Utiliza flexbox para el layout */
+  position: relative; /* Posiciona el elemento relativamente */
 }
 
+/* Contenedor de la imagen del producto */
+.imageContainer {
+  display: flex; /* Utiliza flexbox para el layout */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Alinea los elementos al centro verticalmente */
+  background-color: white; /* Color de fondo */
+  margin: 10px; /* Margen alrededor del contenedor */
+}
+
+/* Estilos para el enlace de la imagen del producto */
+.imageContainer a {
+  box-shadow: var(--box-shadow-common); /* Sombra común */
+  width: 60px; /* Ancho fijo */
+  height: 60px; /* Altura fija */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilos para la imagen del producto */
+.imageContainer img {
+  width: 60px; /* Ancho fijo */
+  height: 60px; /* Altura fija */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Contenedor de la información del producto */
+.infoContainer {
+  width: 140px; /* Ancho fijo */
+  display: flex; /* Utiliza flexbox para el layout */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+/* Estilos para los elementos dentro del contenedor de información */
+.infoContainer div {
+  width: 100%; /* Ancho completo */
+}
+
+/* Estilos para el título del producto */
+.title h3 {
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilos para el código del producto */
+.code {
+  font-size: 12px; /* Tamaño de fuente */
+  color: gray; /* Color del texto */
+}
+
+/* Contenedor de los precios del producto */
+.pricesContainer {
+  display: flex; /* Utiliza flexbox para el layout */
+}
+
+/* Estilos para el precio del producto */
+.price {
+  display: flex; /* Utiliza flexbox para el layout */
+  align-items: center; /* Alinea los elementos al centro verticalmente */
+  padding: 0 8px; /* Espaciado interno horizontal */
+  border: 2px solid var(--primary-color); /* Borde con color principal */
+  font-weight: bold; /* Peso de la fuente */
+  color: var(--primary-color); /* Color del texto */
+  border-radius: 20px; /* Bordes redondeados */
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilos para el contenedor de la cantidad */
+.quantityContainer {
+  position: absolute; /* Posiciona el elemento absolutamente */
+  right: 5px; /* Posiciona desde la derecha */
+  top: 5px; /* Posiciona desde la parte superior */
+  height: 100%; /* Altura completa */
+}
+
+/* Estilos para el texto de la cantidad */
+.quantityContainer span {
+  margin: 0 5px; /* Margen horizontal */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Estilos para los botones de la cantidad */
+.quantityContainer button {
+  border-radius: 50%; /* Bordes redondeados */
+  font-size: 18px; /* Tamaño de fuente */
+  width: 22px; /* Ancho fijo */
+  border: 1px solid; /* Borde sólido */
+  background-color: transparent; /* Fondo transparente */
+  box-shadow: var(--box-shadow-common); /* Sombra común */
+}

@@ -1,0 +1,110 @@
+/* [project]/src/app/styles/NewProductsContainer.module.css [app-client] (css) */
+.NewProductsContainer-module__Fry_sa__productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.NewProductsContainer-module__Fry_sa__productCard {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 12px #0000001a;
+  transition: transform .3s;
+  flex: calc(33.333% - 40px);
+  box-sizing: border-box;
+}
+
+.NewProductsContainer-module__Fry_sa__productCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px #0003;
+}
+
+.NewProductsContainer-module__Fry_sa__productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.NewProductsContainer-module__Fry_sa__productDetails {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.NewProductsContainer-module__Fry_sa__productPrice {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.NewProductsContainer-module__Fry_sa__buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.NewProductsContainer-module__Fry_sa__addToCartButton, .NewProductsContainer-module__Fry_sa__removeFromCartButton {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color .3s, transform .3s;
+}
+
+.NewProductsContainer-module__Fry_sa__addToCartButton:hover, .NewProductsContainer-module__Fry_sa__removeFromCartButton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.NewProductsContainer-module__Fry_sa__addToCartButton:focus, .NewProductsContainer-module__Fry_sa__removeFromCartButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #e6394680;
+}
+
+.NewProductsContainer-module__Fry_sa__disabledButton {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.NewProductsContainer-module__Fry_sa__disabledButton:hover {
+  background-color: #ccc;
+  transform: none;
+}
+
+.NewProductsContainer-module__Fry_sa__activeButton {
+  background-color: #e63946;
+}
+
+.NewProductsContainer-module__Fry_sa__activeButton:hover {
+  background-color: #d62839;
+  transform: scale(1.05);
+}
+
+@media (width <= 1200px) {
+  .NewProductsContainer-module__Fry_sa__productCard {
+    flex: calc(50% - 40px);
+  }
+}
+
+@media (width <= 768px) {
+  .NewProductsContainer-module__Fry_sa__productCard {
+    flex: calc(100% - 40px);
+  }
+}
+
+/*# sourceMappingURL=src_app_styles_NewProductsContainer_module_b52d8e.css.map*/

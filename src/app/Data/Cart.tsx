@@ -34,9 +34,13 @@ interface CartItem {
     }
   };
   
+  // Función para eliminar todos los productos de un tipo específico del carrito
+  export const removeAllProductsFromCart = (codeProduct: string): void => {
+    cart.delete(codeProduct);
+  };
+
   // Función para obtener el carrito completo
   export const getCarrito = (): CartItem[] => {
     // Convertimos el Map a un array de CartItem
     return Array.from(cart.values());
   };
-  

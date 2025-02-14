@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/gokuq/Videos/proyectos/react/shopping%20cart/shopping-cart-test/src/app/styles/UIChangerButton.module.css"],"sourcesContent":["/* app/styles/UIChangerButton.module.css */\r\n\r\n/* Estilos para el botón de cambiar UI */\r\n.uiChangerButton {\r\n    padding: 10px 20px;\r\n    background-color: #3498db; /* Azul vibrante */\r\n    color: white;\r\n    border: none;\r\n    border-radius: 50px;\r\n    font-size: 16px;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    position: fixed; /* Fijamos el botón en la parte superior derecha */\r\n    top: 20px; /* Espacio desde el borde superior */\r\n    right: 20px; /* Espacio desde el borde derecho */\r\n    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */\r\n  }\r\n  \r\n  /* Efecto hover para el botón */\r\n  .uiChangerButton:hover {\r\n    background-color: #2980b9;\r\n    transform: scale(1.1);\r\n  }\r\n  \r\n  /* Efecto focus */\r\n  .uiChangerButton:focus {\r\n    outline: none;\r\n    box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);\r\n  }\r\n  \r\n  /* Efecto activo */\r\n  .uiChangerButton:active {\r\n    transform: scale(1);\r\n    background-color: #1f639d;\r\n  }\r\n  "],"names":[],"mappings":"AAGA;;;;;;;;;;;;;;;AAgBE;;;;;AAMA;;;;;AAMA"}},
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

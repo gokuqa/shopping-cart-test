@@ -1,26 +1,63 @@
 /* [project]/src/app/globals.css [app-client] (css) */
-html, body {
-  max-width: 100vw;
-  overflow-x: hidden;
+:root {
+  --primary-color: #ff4202;
+  --box-shadow-common: 0 0 5px 0 #000000bf;
+  --header-background: #fff;
+  --modal-background: #f0f8ffaf;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  font-family: consolas;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+}
+
+.contentPage {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow-common);
+}
+
+.contentPage2 {
+  width: 320px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow-common);
+}
+
+@media (width >= 768px) {
+  .contentPage {
+    margin: 10px 0;
+  }
+
+  .contentPage2 {
+    margin: 10px 0;
+  }
 }
 
 .Product {
@@ -78,9 +115,9 @@ a {
 
 .Product .infoContainer .pricesContainer .price {
   align-items: center;
-  border: 2px solid #ff4202;
+  border: 2px solid var(--primary-color);
   border-radius: 20px;
-  color: #ff4202;
+  color: var(--primary-color);
   display: flex;
   font-size: 14px;
   font-weight: 700;
@@ -89,10 +126,10 @@ a {
 }
 
 .Product .quantityContainer {
-  height: 100%;
   position: absolute;
-  right: 5px;
   top: 5px;
+  right: 5px;
+  height: 100%;
 }
 
 .Product .quantityContainer span {
@@ -109,20 +146,16 @@ a {
   width: 22px;
 }
 
-.ProductsContainer {
-  margin-top: 65px;
-}
-
 .CartModal {
-  align-items: center;
-  background-color: #f0f8ffaf;
   display: flex;
-  height: 100%;
   justify-content: center;
-  left: 0;
+  align-items: center;
+  background-color: var(--modal-background);
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
 }
 
 .CartModal .container {
@@ -134,29 +167,25 @@ a {
   width: 320px;
 }
 
-.CartModal .container .buttons {
+.CartModal .buttons {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   width: 100%;
+  padding: 20px;
 }
 
-.CartModal .container .buttons button {
-  background-color: initial;
-}
-
-.CartModal .container .buttons button, .CartModal .container .buttons span {
+.CartModal .buttons button, .CartModal .buttons span {
   border-radius: 6px;
   color: #fff;
   padding: 20px;
 }
 
-.CartModal .container .buttons span {
-  background-color: #ff4202;
+.CartModal .buttons span {
+  background-color: var(--primary-color);
   font-weight: 700;
 }
 
-.CartModal .container .proceed {
+.CartModal .proceed {
   background-color: #0ff;
   border: none;
   border-radius: 4px;
@@ -169,10 +198,10 @@ a {
 }
 
 .header {
-  align-items: center;
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-background);
   position: fixed;
   top: 20px;
   width: 320px;
@@ -182,10 +211,6 @@ a {
 .header h1 {
   font-size: 20px;
   padding: 10px;
-}
-
-.header .ShowCartButton {
-  margin-right: 10px;
 }
 
 .header .ShowCartButton button {
@@ -200,47 +225,12 @@ a {
 }
 
 .header .ShowCartButton button span {
-  background-color: #ff4202;
+  background-color: var(--primary-color);
   border-radius: 50%;
   color: #fff;
   display: block;
   margin-left: 5px;
   padding: 2px 5px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: consolas;
-}
-
-.App {
-  align-items: flex-start;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  width: 100%;
-}
-
-.contentPage {
-  border-radius: 4px;
-  box-shadow: 0 0 5px #000000bf;
-  position: relative;
-  width: 320px;
-}
-
-button {
-  cursor: pointer;
-  font-family: consolas;
-}
-
-@media (width >= 768px) {
-  .contentPage {
-    margin: 10px 0;
-  }
 }
 
 /*# sourceMappingURL=src_app_globals_b52d8e.css.map*/

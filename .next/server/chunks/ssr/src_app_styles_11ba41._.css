@@ -1,0 +1,54 @@
+/* [project]/src/app/styles/header.css [app-client] (css) */
+:root {
+  --primary-color: #ff4202;
+  --box-shadow-common: 0px 0px 10px -6px #000000bf;
+}
+
+.header {
+  width: 320px;
+  position: fixed;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.header h1 {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.ShowCartButton {
+  margin-right: 10px;
+}
+
+.ShowCartButton button {
+  display: flex;
+  align-items: center;
+  background-color: #0000;
+  border: none;
+}
+
+.ShowCartButton img {
+  width: 25px;
+}
+
+.ShowCartButton span {
+  margin-left: 5px;
+  display: block;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 2px 5px;
+}
+
+
+/* [project]/src/app/styles/productContainer.css [app-client] (css) */
+.ProductsContainer {
+  margin-top: 65px;
+}
+
+
+/*# sourceMappingURL=src_app_styles_11ba41._.css.map*/

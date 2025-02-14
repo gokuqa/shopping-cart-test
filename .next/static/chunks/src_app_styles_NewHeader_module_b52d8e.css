@@ -1,0 +1,56 @@
+/* [project]/src/app/styles/NewHeader.module.css [app-client] (css) */
+.NewHeader-module__gNE7eW__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 4px 12px #0000001a;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.NewHeader-module__gNE7eW__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.NewHeader-module__gNE7eW__cartButton {
+  background-color: #e63946;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color .3s, transform .3s;
+}
+
+.NewHeader-module__gNE7eW__cartButton:hover {
+  background-color: #d62839;
+  transform: scale(1.05);
+}
+
+.NewHeader-module__gNE7eW__cartButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #e6394680;
+}
+
+.NewHeader-module__gNE7eW__cartIcon {
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.NewHeader-module__gNE7eW__cartCount {
+  background-color: #fff;
+  color: #e63946;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=src_app_styles_NewHeader_module_b52d8e.css.map*/

@@ -1,4 +1,9 @@
 /* [project]/src/app/styles/header.css [app-client] (css) */
+:root {
+  --primary-color: #ff4202;
+  --box-shadow-common: 0px 0px 10px -6px #000000bf;
+}
+
 .header {
   width: 320px;
   position: fixed;
@@ -15,26 +20,26 @@
   font-size: 20px;
 }
 
-.header .ShowCartButton {
+.ShowCartButton {
   margin-right: 10px;
 }
 
-.header .ShowCartButton button {
+.ShowCartButton button {
   display: flex;
   align-items: center;
   background-color: #0000;
   border: none;
 }
 
-.header .ShowCartButton button img {
+.ShowCartButton img {
   width: 25px;
 }
 
-.header .ShowCartButton button span {
+.ShowCartButton span {
   margin-left: 5px;
   display: block;
   border-radius: 50%;
-  background-color: #ff4202;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 2px 5px;
 }

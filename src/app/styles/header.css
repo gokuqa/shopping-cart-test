@@ -1,34 +1,51 @@
+/* Definición de variables CSS */
+:root {
+    --primary-color: rgb(255, 66, 2); /* Color principal utilizado en la aplicación */
+    --box-shadow-common: 0px 0px 10px -6px rgba(0, 0, 0, 0.75); /* Sombra común utilizada en varios elementos */
+}
+
+/* Estilos para el encabezado */
 .header {
-    width: 320px;
-    position: fixed;
-    top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    z-index: 1;
-    h1 {
-        padding: 10px;
-        font-size: 20px;
-    }
-    .ShowCartButton {
-        margin-right: 10px;
-        button {
-            display: flex;
-            align-items: center;
-            background-color: transparent;
-            border: none;
-            img {
-                width: 25px;
-            }
-            span {
-                margin-left: 5px;
-                display: block;
-                border-radius: 50%;
-                background-color:rgb(255, 66, 2);
-                color: white;
-                padding: 2px 5px;
-            }
-        }
-    }
+    width: 320px; /* Ancho fijo del encabezado */
+    position: fixed; /* Posiciona el encabezado fijamente */
+    top: 20px; /* Posiciona desde la parte superior */
+    display: flex; /* Utiliza flexbox para el layout */
+    justify-content: space-between; /* Espacia los elementos */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    background-color: white; /* Color de fondo */
+    z-index: 1; /* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+/* Estilos para el título del encabezado */
+.header h1 {
+    padding: 10px; /* Añade padding */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+/* Estilos para el botón de mostrar el carrito */
+.ShowCartButton {
+    margin-right: 10px; /* Añade margen derecho */
+}
+
+/* Estilos para el botón dentro del contenedor ShowCartButton */
+.ShowCartButton button {
+    display: flex; /* Utiliza flexbox para el layout */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+}
+
+/* Estilos para la imagen dentro del botón ShowCartButton */
+.ShowCartButton img {
+    width: 25px; /* Ancho fijo */
+}
+
+/* Estilos para el contador dentro del botón ShowCartButton */
+.ShowCartButton span {
+    margin-left: 5px; /* Añade margen izquierdo */
+    display: block; /* Muestra el elemento como bloque */
+    border-radius: 50%; /* Bordes redondeados */
+    background-color: var(--primary-color); /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 2px 5px; /* Añade padding */
 }

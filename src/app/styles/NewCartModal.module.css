@@ -1,0 +1,273 @@
+/* app/components/NewCartModal.module.css */
+
+/* Estilos para el modal */
+.modal {
+  position: fixed; /* Posiciona el elemento fijamente */
+  top: 0; /* Posiciona desde la parte superior */
+  left: 0; /* Posiciona desde la izquierda */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia */
+  display: flex; /* Utiliza flexbox para el layout */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Alinea los elementos al centro verticalmente */
+  opacity: 0; /* Opacidad inicial */
+  animation: fadeIn 0.3s forwards; /* Animación de desvanecimiento */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Opacidad final */
+  }
+}
+
+/* Estilos para el contenido del modal */
+.modalContent {
+  background-color: #fff; /* Color de fondo */
+  padding: 30px; /* Añade padding */
+  border-radius: 12px; /* Bordes redondeados */
+  width: 800px; /* Ancho fijo */
+  max-width: 90%; /* Ancho máximo del 90% */
+  text-align: center; /* Alineación del texto al centro */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+  transform: scale(0.9); /* Escala inicial */
+  animation: scaleIn 0.3s forwards; /* Animación de escalado */
+}
+
+/* Animación de escalado */
+@keyframes scaleIn {
+  to {
+    transform: scale(1); /* Escala final */
+  }
+}
+
+/* Estilos para el botón de cerrar */
+.closeButton {
+  background-color: transparent; /* Fondo transparente */
+  color: #333; /* Color del texto */
+  border: none; /* Sin borde */
+  font-size: 24px; /* Tamaño de fuente */
+  position: absolute; /* Posiciona el elemento absolutamente */
+  top: 10px; /* Posiciona desde la parte superior */
+  right: 10px; /* Posiciona desde la derecha */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+/* Efecto hover para el botón de cerrar */
+.closeButton:hover {
+  color: #e63946; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilos para el contenido */
+.content {
+  display: flex; /* Utiliza flexbox para el layout */
+  justify-content: space-between; /* Espacia los elementos */
+}
+
+/* Estilos para los elementos del carrito */
+.cartItems {
+  margin-top: 20px; /* Añade margen superior */
+  max-height: 300px; /* Altura máxima */
+  overflow-y: auto; /* Desbordamiento vertical con scroll */
+  flex: 1; /* Flexibilidad del elemento */
+  margin-right: 20px; /* Añade margen derecho */
+}
+
+/* Estilos para cada elemento del carrito */
+.cartItem {
+  display: flex; /* Utiliza flexbox para el layout */
+  justify-content: space-between; /* Espacia los elementos */
+  align-items: center; /* Alinea los elementos al centro verticalmente */
+  padding: 10px; /* Añade padding */
+  border: 1px solid #eee; /* Borde */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Añade margen inferior */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el color de fondo y la sombra */
+}
+
+/* Efecto hover para cada elemento del carrito */
+.cartItem:hover {
+  background-color: #f9f9f9; /* Cambia el color de fondo al pasar el mouse */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Añade sombra al pasar el mouse */
+}
+
+/* Estilos para los detalles de cada elemento del carrito */
+.cartItemDetails {
+  display: flex; /* Utiliza flexbox para el layout */
+  flex-direction: column; /* Dirección de los elementos en columna */
+  align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
+  flex: 1; /* Flexibilidad del elemento */
+}
+
+/* Estilos para el nombre del producto */
+.cartItemName {
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  margin-bottom: 5px; /* Añade margen inferior */
+}
+
+/* Estilos para la descripción del producto */
+.cartItemDescription {
+  font-size: 14px; /* Tamaño de fuente */
+  color: #777; /* Color del texto */
+  margin-bottom: 5px; /* Añade margen inferior */
+}
+
+/* Estilos para la información del producto */
+.cartItemInfo {
+  font-size: 14px; /* Tamaño de fuente */
+  color: #555; /* Color del texto */
+}
+
+/* Estilos para el subtotal del producto */
+.cartItemSubtotal {
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  margin-top: 5px; /* Añade margen superior */
+}
+
+/* Estilos para el código del producto */
+.cartItemCode {
+  font-size: 12px; /* Tamaño de fuente */
+  color: #999; /* Color del texto */
+  margin-top: 5px; /* Añade margen superior */
+}
+
+/* Estilos para la imagen del producto */
+.cartItemImage {
+  width: 80px; /* Ancho fijo */
+  height: 80px; /* Altura fija */
+  object-fit: cover; /* Ajusta la imagen para que se adapte al contenedor sin recortarse */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-right: 10px; /* Añade margen derecho */
+}
+
+/* Controles de cantidad */
+.quantityControls {
+  display: flex; /* Utiliza flexbox para el layout */
+  align-items: center; /* Alinea los elementos al centro verticalmente */
+  gap: 10px; /* Espaciado entre los elementos */
+}
+
+/* Estilos para los botones de cantidad */
+.quantityButton {
+  background-color: #4caf50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 5px 10px; /* Añade padding */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+/* Efecto hover para los botones de cantidad */
+.quantityButton:hover {
+  background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilos para el botón de eliminar */
+.removeButton {
+  background-color: #e63946; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 5px 10px; /* Añade padding */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+/* Efecto hover para el botón de eliminar */
+.removeButton:hover {
+  background-color: #d62839; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilos para el total */
+.total {
+  font-size: 20px; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  margin-top: 20px; /* Añade margen superior */
+}
+
+/* Estilos para el resumen */
+.summary {
+  margin-top: 20px; /* Añade margen superior */
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para cada ítem del resumen */
+.summaryItem {
+  display: flex; /* Utiliza flexbox para el layout */
+  justify-content: space-between; /* Espacia los elementos */
+  margin-bottom: 10px; /* Añade margen inferior */
+}
+
+/* Estilos para los textos dentro de cada ítem del resumen */
+.summaryItem span {
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Contenedor del formulario */
+.formContainer {
+  flex: 1; /* Flexibilidad del elemento */
+  display: flex; /* Utiliza flexbox para el layout */
+  flex-direction: column; /* Dirección de los elementos en columna */
+  justify-content: space-between; /* Espacia los elementos */
+}
+
+/* Estilos para el formulario */
+.form {
+  margin-bottom: 20px; /* Añade margen inferior */
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para cada grupo de campos del formulario */
+.formGroup {
+  margin-bottom: 15px; /* Añade margen inferior */
+}
+
+/* Estilos para las etiquetas de los campos del formulario */
+.formGroup label {
+  display: block; /* Muestra el elemento como bloque */
+  margin-bottom: 5px; /* Añade margen inferior */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Estilos para los campos de entrada del formulario */
+.formGroup input {
+  width: 100%; /* Ancho completo */
+  padding: 8px; /* Añade padding */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilos para los mensajes de error del formulario */
+.formError {
+  color: #e63946; /* Color del texto */
+  margin-bottom: 15px; /* Añade margen inferior */
+}
+
+/* Contenedor del botón de pago */
+.payButtonContainer {
+  display: flex; /* Utiliza flexbox para el layout */
+  justify-content: flex-end; /* Alinea los elementos al final horizontalmente */
+}
+
+/* Estilos para el botón de pago */
+.payButton {
+  background-color: #4caf50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Añade padding */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para el color de fondo y la escala */
+  margin-top: 20px; /* Añade margen superior */
+}
+
+/* Efecto hover para el botón de pago */
+.payButton:hover {
+  background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Escala el botón ligeramente */
+}

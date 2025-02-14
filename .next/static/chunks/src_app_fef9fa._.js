@@ -412,6 +412,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Data$2f$Cart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/app/Data/Cart.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Data$2f$Products$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/app/Data/Products.tsx [app-client] (ecmascript)");
+(()=>{
+    const e = new Error("Cannot find module '../styles/CartModal.module.css'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Data$2f$POST$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/app/Data/POST.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
@@ -423,41 +428,35 @@ var _s = __turbopack_refresh__.signature();
 ;
 const CartModal = ({ handleClose })=>{
     _s();
-    // Estado que guarda el precio total del carrito
     const [totalPrice, setTotalPrice] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("0.00");
-    // Función para calcular el total del carrito
     const calculateTotalPrice = ()=>{
-        // Crear un mapa de productos donde la clave es el código del producto
         const productsMap = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Data$2f$Products$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Products"].reduce((map, product)=>{
             map[product.code] = product.price;
             return map;
         }, {});
-        // Calcular el total sumando el precio de cada producto multiplicado por su cantidad
         const total = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Data$2f$Cart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getCarrito"])().reduce((total, item)=>{
             const productPrice = productsMap[item.code] || 0;
             return total + item.quantity * productPrice;
-        }, 0).toFixed(2); // Asegura dos decimales
+        }, 0).toFixed(2);
         return total;
     };
-    // useEffect que se ejecuta solo una vez al montar el componente
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "CartModal.useEffect": ()=>{
             const total = calculateTotalPrice();
-            setTotalPrice(total); // Actualiza el estado con el total calculado
+            setTotalPrice(total);
         }
-    }["CartModal.useEffect"], []); // Este useEffect solo se ejecuta una vez, cuando el componente se monta
-    // Función para manejar el proceso de compra
+    }["CartModal.useEffect"], []);
     const handleProceed = ()=>{
-        (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Data$2f$POST$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["postData"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Data$2f$Cart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getCarrito"])()); // Simulación de enviar datos del carrito al backend
-        handleClose(); // Cerrar el modal después de proceder con la compra
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Data$2f$POST$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["postData"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Data$2f$Cart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getCarrito"])());
+        handleClose();
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "CartModal",
+        className: styles.CartModal,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "container",
+            className: styles.container,
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "buttons",
+                    className: styles.buttons,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: handleClose,
@@ -465,7 +464,7 @@ const CartModal = ({ handleClose })=>{
                             children: "Close"
                         }, void 0, false, {
                             fileName: "[project]/src/app/Components/CartModal.tsx",
-                            lineNumber: 54,
+                            lineNumber: 46,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -475,34 +474,34 @@ const CartModal = ({ handleClose })=>{
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Components/CartModal.tsx",
-                            lineNumber: 58,
+                            lineNumber: 49,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/Components/CartModal.tsx",
-                    lineNumber: 52,
+                    lineNumber: 45,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    className: "proceed",
+                    className: styles.proceed,
                     onClick: handleProceed,
                     "aria-label": "Proceed to buy",
                     children: "Proceed to buy"
                 }, void 0, false, {
                     fileName: "[project]/src/app/Components/CartModal.tsx",
-                    lineNumber: 61,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/Components/CartModal.tsx",
-            lineNumber: 51,
+            lineNumber: 44,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/Components/CartModal.tsx",
-        lineNumber: 50,
+        lineNumber: 43,
         columnNumber: 5
     }, this);
 };
@@ -628,15 +627,15 @@ function Home() {
                     setItemQuantity: setItemQuantity
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 16,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this),
                 showCartResume && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Components$2f$CartModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CartModal"], {
                     handleClose: ()=>setShowCartResume(false)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 17,
-                    columnNumber: 28
+                    lineNumber: 24,
+                    columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {

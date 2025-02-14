@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/gokuq/Videos/proyectos/react/shopping%20cart/shopping-cart-test/src/app/styles/header.css"],"sourcesContent":[":root {\r\n    --primary-color: rgb(255, 66, 2);\r\n    --box-shadow-common: 0px 0px 10px -6px rgba(0, 0, 0, 0.75);\r\n}\r\n\r\n.header {\r\n    width: 320px;\r\n    position: fixed;\r\n    top: 20px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    background-color: white;\r\n    z-index: 1;\r\n}\r\n\r\n.header h1 {\r\n    padding: 10px;\r\n    font-size: 20px;\r\n}\r\n\r\n.ShowCartButton {\r\n    margin-right: 10px;\r\n}\r\n\r\n.ShowCartButton button {\r\n    display: flex;\r\n    align-items: center;\r\n    background-color: transparent;\r\n    border: none;\r\n}\r\n\r\n.ShowCartButton img {\r\n    width: 25px;\r\n}\r\n\r\n.ShowCartButton span {\r\n    margin-left: 5px;\r\n    display: block;\r\n    border-radius: 50%;\r\n    background-color: var(--primary-color);\r\n    color: white;\r\n    padding: 2px 5px;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;;;;;AAWA;;;;;AAKA;;;;AAIA;;;;;;;AAOA;;;;AAIA"}},
+    {"offset": {"line": 45, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/gokuq/Videos/proyectos/react/shopping%20cart/shopping-cart-test/src/app/styles/productContainer.css"],"sourcesContent":[".ProductsContainer {\n    margin-top: 65px;\n}\n"],"names":[],"mappings":"AAAA"}},
+    {"offset": {"line": 51, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

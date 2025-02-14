@@ -1,0 +1,60 @@
+/* Estilos para el encabezado */
+.header {
+  display: flex; /* Utiliza flexbox para el layout */
+  justify-content: space-between; /* Espacia los elementos */
+  align-items: center; /* Alinea los elementos al centro verticalmente */
+  padding: 20px; /* Añade padding */
+  background-color: #333; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 20px; /* Añade margen inferior */
+}
+
+/* Estilos para el título */
+.title {
+  font-size: 24px; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Estilos para el botón del carrito */
+.cartButton {
+  background-color: #e63946; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 15px; /* Añade padding */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  display: flex; /* Utiliza flexbox para el layout */
+  align-items: center; /* Alinea los elementos al centro verticalmente */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para el color de fondo y la escala */
+}
+
+/* Efecto hover para el botón del carrito */
+.cartButton:hover {
+  background-color: #d62839; /* Cambia el color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Escala el botón ligeramente */
+}
+
+/* Efecto de enfoque para el botón del carrito */
+.cartButton:focus {
+  outline: none; /* Elimina el borde de enfoque por defecto */
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.5); /* Añade una sombra alrededor del botón */
+}
+
+/* Estilos para el icono del carrito */
+.cartIcon {
+  margin-right: 8px; /* Añade margen derecho */
+  width: 24px; /* Ancho fijo */
+  height: 24px; /* Altura fija */
+}
+
+/* Estilos para el contador del carrito */
+.cartCount {
+  background-color: #fff; /* Color de fondo */
+  color: #e63946; /* Color del texto */
+  border-radius: 50%; /* Bordes redondeados */
+  padding: 5px 10px; /* Añade padding */
+  font-weight: bold; /* Peso de la fuente */
+  margin-left: 10px; /* Añade margen izquierdo */
+}

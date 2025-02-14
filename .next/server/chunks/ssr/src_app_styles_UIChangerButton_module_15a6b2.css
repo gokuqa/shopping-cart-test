@@ -1,0 +1,33 @@
+/* [project]/src/app/styles/UIChangerButton.module.css [app-client] (css) */
+.UIChangerButton-module__uMfMGG__uiChangerButton {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all .3s;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.UIChangerButton-module__uMfMGG__uiChangerButton:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+.UIChangerButton-module__uMfMGG__uiChangerButton:focus {
+  outline: none;
+  box-shadow: 0 0 10px #3498dbb3;
+}
+
+.UIChangerButton-module__uMfMGG__uiChangerButton:active {
+  transform: scale(1);
+  background-color: #1f639d;
+}
+
+
+/*# sourceMappingURL=src_app_styles_UIChangerButton_module_15a6b2.css.map*/
